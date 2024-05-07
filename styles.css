@@ -50,7 +50,7 @@ header{
 
 #welcome-section{
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   flex-direction: row;
   justify-content: center;
@@ -184,14 +184,13 @@ ul > li > a{
     align-items: center;
 
     & > h2{
-      max-width: 20vw;
-      min-width: 20vw;
+      width: 300px;
       color: var(--main-grey_2);
     }
 
     & > ul{
       display: flex;
-      column-gap: 10vw;
+      column-gap: 8vw;
       align-items: center;
       list-style-type: none;
       justify-content: center;
@@ -277,8 +276,11 @@ figcaption{
 
 #contact ul{
   display: flex;
-  gap: 5rem;
+  column-gap: 5rem;
+  row-gap: 2rem;
+  flex-wrap: wrap;
   list-style-type: none;
+  justify-content: center;
 }
 
 #contact a{
@@ -298,6 +300,10 @@ figcaption{
   }
 }
 
+.iconSpace{
+  margin-right: 0.5rem;
+}
+
 #contact li:hover{
   transform: translateY(10px);
 }
@@ -306,9 +312,41 @@ figcaption{
   .projects-grid{
     grid-template-columns: repeat(2, max(400px, 30vw));
   }
+
+  #welcome-section{
+    padding-top: 90px;
+    flex-direction: column;
+     
+    & > div{
+      width: 90%;
+      padding-bottom: 40px;
+
+      & > h1{
+        text-align: center;
+      }
+    }
+  }
+
+  .skills > div{
+    & > h2{
+      width: 250px;
+    }
+
+    & > ul{
+      column-gap: 4vw;
+    }
+  }
 }
 
 @media (max-width: 850px){
+  #navbar ul{
+    gap: 2rem;
+  }
+  
+  #navbar a{
+    font-size: 1rem;
+  }
+
   .projects-grid{
     grid-template-columns: max(400px, 90vw);
   }
@@ -316,8 +354,26 @@ figcaption{
   .project-tile{
     height: 80vh;
   }
-}
 
-.iconSpace{
-  margin-right: 0.5rem;
+  .skills{
+    padding-bottom: 0;
+
+    & > div{
+      flex-direction: column;
+      padding-bottom: 30px;
+      text-align: center;
+
+      & > h2{
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  #contact{
+    padding: 30px 0;
+    
+    & > h1{
+      font-size: 2.5rem;
+    }
+  }
 }
