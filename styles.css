@@ -10,6 +10,7 @@
   --main-blue_1: #31436d;
   --main-blue_2: #3e4f75;
   --main-blue_3: #6481c0;
+  --main-blue_4: #4b597a;
   --main-grey: #323d49;
   --main-grey_2: #d2d3d4;
 }
@@ -142,6 +143,7 @@ ul > li > a{
   list-style-type: none;
   align-items: center;
   justify-content: center;
+  background-color: var(--main-blue_4);
 
   & > li{
     padding: 5px 10px;
@@ -191,7 +193,9 @@ ul > li > a{
     & > ul{
       display: flex;
       column-gap: 8vw;
+      row-gap: 3vw;
       align-items: center;
+      flex-wrap: wrap;
       list-style-type: none;
       justify-content: center;
 
@@ -313,6 +317,17 @@ figcaption{
     grid-template-columns: repeat(2, max(400px, 30vw));
   }
 
+  .project-tile{
+    & img{
+      height: auto;
+      object-fit: contain;
+    }
+
+    & .linkProject{
+      display: flex;
+    }
+  }
+
   #welcome-section{
     padding-top: 90px;
     flex-direction: column;
@@ -341,6 +356,8 @@ figcaption{
 @media (max-width: 850px){
   #navbar ul{
     gap: 2rem;
+    margin-right: 0;
+    justify-content: center;
   }
   
   #navbar a{
@@ -373,7 +390,7 @@ figcaption{
     padding: 30px 0;
     
     & > h1{
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
   }
 }
