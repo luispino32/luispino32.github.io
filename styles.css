@@ -368,10 +368,6 @@ figcaption{
     grid-template-columns: max(400px, 90vw);
   }
 
-  .project-tile{
-    height: 80vh;
-  }
-
   .skills{
     padding-bottom: 0;
 
@@ -392,5 +388,11 @@ figcaption{
     & > h1{
       font-size: 2.2rem;
     }
+  }
+}
+
+@media (max-width: 410px){
+  #navbar ul{
+    gap: 1rem;
   }
 }
