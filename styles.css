@@ -4,13 +4,13 @@
 
 :root{
   --main-red: #be3144;
+  --main-black: #000000;
   --main-dark: #444;
   --main-white: white;
   --main-blue: #45567d;
   --main-blue_1: #31436d;
   --main-blue_2: #3e4f75;
   --main-blue_3: #6481c0;
-  --main-blue_4: #4b597a;
   --main-grey: #323d49;
   --main-grey_2: #d2d3d4;
 }
@@ -25,6 +25,7 @@ header{
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99;
   width: 100%;
 }
 
@@ -110,7 +111,6 @@ header{
   height: 55vh;
   margin-bottom: 7rem;
   text-decoration: none;
-  border: 1px solid var(--main-grey);
 
   & > figure > div{
     display: flex;
@@ -121,7 +121,7 @@ header{
   &:hover{
     & img{
       height: auto;
-      object-fit: contain;
+      /*object-fit: contain;*/
     }
 
     & .linkProject{
@@ -137,15 +137,17 @@ ul > li > a{
 
 .linkProject{
   flex: 1;
+  row-gap: 5px;
   display: none;
   flex-wrap: wrap;
   column-gap: 50px;
+  padding: 10px 5px;
+  align-items: center;
   flex-direction: row;
   list-style-type: none;
-  align-items: center;
   justify-content: center;
-  /*background-color: var(--main-blue_4);*/
-  border-top: 1px solid var(--main-grey);
+  background-color: var(--main-grey);
+  border-top: 1px solid var(--main-black);
 
   & > li{
     padding: 5px 10px;
@@ -236,7 +238,6 @@ figure{
 }
 
 figure img{
-  width: 100%;
   height: 100%;
   overflow: hidden;
   object-fit: cover;
@@ -248,7 +249,6 @@ figure img{
 
 figcaption{
   display: flex;
-  width: 100%;
   height: 4rem;
   font-weight: bold;
   text-align: center;
@@ -257,6 +257,7 @@ figcaption{
   justify-content: center;
   color: var(--main-white);
   background-color: var(--main-grey);
+  border: 1px solid var(--main-black);
 }
 
 #contact{
@@ -322,7 +323,7 @@ figcaption{
   .project-tile{
     & img{
       height: auto;
-      object-fit: contain;
+      /*object-fit: contain;*/
     }
 
     & .linkProject{
@@ -396,5 +397,9 @@ figcaption{
 @media (max-width: 410px){
   #navbar ul{
     gap: 1rem;
+  }
+
+  .projects-grid{
+    grid-template-columns: max(300px, 100vw);
   }
 }
