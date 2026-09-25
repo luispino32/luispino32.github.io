@@ -1,180 +1,510 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Luis Miguel Ospino</title>
-    <link rel="stylesheet" href="./styles.css"/>
-    <link rel="stylesheet" href="./icons.css"/>
-  </head>
-  <body>
-    <header>
-      <nav id="navbar">
-        <ul>
-          <li><a href="#welcome-section">Acerca de mi</a></li>
-          <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#skills">Habilidades</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="welcome-section">
-        <figure>
-          <img src="fotoPerfil.png"/>
-        </figure>
-        <div>
-          <h1>Hola! Soy Luis Miguel Ospino</h1>
-          <p>
-            <span>Full Stack Developer</span> con estudios en ingeniería electrónica y experiencia destacada en tecnologías web 
-            para Front y Back-end. Durante tres años ejecutando investigación y desarrollo para la solución de problemas 
-            reales, me da la capacidad de abordar desafíos que involucren las áreas del desarrollo web ó el control 
-            electrónico usando circuitos análogos y digitales. Los lenguajes que hasta el momento he tenido la necesidad 
-            de usar son: HTML, CSS, JavaScript, TypeScript, PHP, lenguaje ensamblador para la programación 
-            de microcontroladores PIC, C y C++ orientado a la programación de microcontroladores PIC y Atmega, 
-            VHDL para programación de FPGA’s.
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luis Miguel Ospino Acuña — Ing. Electrónico en formación · IoT · Full Stack</title>
+  <meta name="description" content="Portfolio de Luis Miguel Ospino Acuña: ingeniero electrónico en formación, automatización, IoT y desarrollo full stack. Más de 10 años de experiencia en mantenimiento biomédico e industrial, diseño electrónico, firmware y software."/>
+  <meta property="og:title" content="Luis Miguel Ospino Acuña — Portfolio"/>
+  <meta property="og:description" content="Electrónica · Automatización · IoT · Full Stack. Sistema de dosificación multimáquina, firmware embebido, backend Go y React."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://luispino32.github.io/"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./styles.css"/>
+  <link rel="stylesheet" href="./icons.css"/>
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav-wrap">
+    <nav class="navbar" id="navbar" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">LO<span class="brand-dot">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#perfil" class="nav-link">Perfil</a></li>
+        <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+        <li><a href="#competencias" class="nav-link">Competencias</a></li>
+        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#educacion" class="nav-link">Educación</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="inicio" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+        <span class="grid-lines" aria-hidden="true"></span>
+      </div>
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse-dot"></span>Disponible para nuevos proyectos</p>
+          <h1 class="hero-title">Luis Miguel<br/>Ospino Acuña</h1>
+          <h2 class="hero-role"><span id="typewriter"></span><span class="caret" aria-hidden="true">|</span></h2>
+          <p class="hero-desc">
+            Ingeniero Electrónico en formación · <strong>Automatización · IoT · Full Stack</strong>.
+            Más de 10 años construyendo soluciones completas: hardware, firmware, backend y frontend.
           </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="assets/cv-completo.pdf" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+              Descargar CV
+            </a>
+            <a class="btn btn-ghost" href="#proyectos">Ver proyectos
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>10+</strong><span>años de experiencia</span></li>
+            <li><strong>5</strong><span>áreas de trabajo</span></li>
+            <li><strong>4</strong><span>piezas del sistema dosificador</span></li>
+            <li><strong>100%</strong><span>materias de la carrera cursadas</span></li>
+          </ul>
         </div>
-      </section>
-      <section id="projects">
-        <h1>Algunos de mis proyectos</h1>
+        <figure class="hero-photo">
+          <div class="photo-ring">
+            <img src="fotoPerfil.png" alt="Foto de perfil de Luis Miguel Ospino Acuña"/>
+          </div>
+        </figure>
+      </div>
+      <a class="scroll-hint" href="#perfil" aria-label="Bajar a perfil"><span></span></a>
+    </section>
+
+    <!-- ===================== PERFIL ===================== -->
+    <section id="perfil" class="section">
+      <div class="container">
+        <p class="sec-eyebrow">Sobre mí</p>
+        <h2 class="sec-title">Perfil profesional</h2>
+        <div class="perfil-grid">
+          <p class="perfil-text">
+            Ingeniero Electrónico en formación: <strong>todas las materias de la carrera cursadas y aprobadas</strong>,
+            pendiente únicamente el requisito de idioma — <strong>3 niveles de inglés</strong> — como condición de grado.
+            Más de <strong>10 años de experiencia real</strong> en electrónica, mantenimiento biomédico e industrial,
+            automatización con microcontroladores, IoT y desarrollo de software, construyendo soluciones completas de
+            hardware + firmware + backend + frontend. Actualmente desarrollo, de forma independiente, la mejora integral
+            del <strong>sistema de dosificación multimáquina</strong> de lavanderías industriales iniciado en DETERQUIN,
+            integrando <strong>herramientas de IA (Gentle AI)</strong> en el desarrollo de firmware y software para
+            automatizar tareas y mejorar la productividad sin sacrificar calidad.
+          </p>
+          <ul class="perfil-chips">
+            <li><span class="chip"><span class="chip-ic g1">🎓</span> Ing. Electrónica — en proceso de grado</span></li>
+            <li><span class="chip"><span class="chip-ic g2">🔬</span> Electrónica · Automatización · IoT</span></li>
+            <li><span class="chip"><span class="chip-ic g3">💻</span> Full Stack: Go · React · TypeScript</span></li>
+            <li><span class="chip"><span class="chip-ic g4">🤖</span> IA aplicada al desarrollo (Gentle AI)</span></li>
+            <li><span class="chip"><span class="chip-ic g1">🧰</span> Mantenimiento biomédico e industrial</span></li>
+            <li><span class="chip"><span class="chip-ic g2">🌐</span> Español nativo · Inglés técnico (en curso)</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCIA ===================== -->
+    <section id="experiencia" class="section section-alt">
+      <div class="container">
+        <p class="sec-eyebrow">Trayectoria</p>
+        <h2 class="sec-title">Experiencia profesional</h2>
+
+        <div class="timeline">
+          <div class="tl-item reveal">
+            <div class="tl-marker current"><span></span></div>
+            <article class="tl-card">
+              <div class="tl-head">
+                <div>
+                  <h3>Dosificador Multimáquina — mejora continua</h3>
+                  <p class="tl-sub">Proyecto propio en desarrollo · iniciado en DETERQUIN</p>
+                </div>
+                <span class="tl-date">2023 — actualidad</span>
+              </div>
+              <span class="badge badge-current">En curso</span>
+              <ul class="tl-list">
+                <li>Arquitectura de dosificación automática para lavanderías industriales: tarjeta principal ATmega 2560 + tarjetas interfaz ATmega 328 por lavadora en bus RS-485.</li>
+                <li>Firmware PlatformIO por capas (application/domain/platform/comm) con suite de pruebas Unity en host y target AVR.</li>
+                <li>Backend en Go (API REST, WebSocket, UART, JWT, SQLite) y dashboard React + TypeScript (Vite, Vitest) para configuración, monitoreo y registro.</li>
+                <li>Almacenamiento redundante y sincronizado: SQLite en Raspberry Pi Zero 2W + EEPROM interna, EEPROM I2C (AT24CM02) y FLASH SPI (W25Q32).</li>
+                <li>Diseño y validación del protocolo de descubrimiento de slots RS-485 y contrato de mensajes entre interfaces y tarjeta principal.</li>
+                <li><strong>Uso de IA (Gentle AI)</strong> en el desarrollo: diseño asistido de firmware y software, generación de pruebas y documentación, con validación humana — mayor productividad, consistencia y menos errores.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-marker"><span></span></div>
+            <article class="tl-card">
+              <div class="tl-head">
+                <div>
+                  <h3>DETERQUIN S.A.S.</h3>
+                  <p class="tl-sub">Jefe de Mantenimiento · Ingeniero de Soporte y Desarrollo · Cali y Cartagena, Colombia</p>
+                </div>
+                <span class="tl-date">dic 2019 — ene 2023</span>
+              </div>
+              <ul class="tl-list">
+                <li>Diseñé e implementé <strong>tarjetas electrónicas</strong> para sistemas de dosificación automática multimáquina de detergentes, adaptadas a cada cliente.</li>
+                <li>Configuré servidor VPS en AWS con broker MQTT (EMQX) y desarrollé dashboards web full stack (React + Express) para gestión y monitoreo remoto.</li>
+                <li>Planifiqué y ejecuté mantenimiento preventivo y correctivo, cronogramas semanales, visitas técnicas y supervisión del equipo de técnicos.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-marker"><span></span></div>
+            <article class="tl-card">
+              <div class="tl-head">
+                <div>
+                  <h3>Biomedical Service Ltda.</h3>
+                  <p class="tl-sub">Soporte Técnico y Jefe de Mantenimiento · Cartagena, Colombia</p>
+                </div>
+                <span class="tl-date">2011 — 2018</span>
+              </div>
+              <ul class="tl-list">
+                <li>Mantenimiento preventivo y correctivo de equipos biomédicos de baja, mediana y alta tecnología.</li>
+                <li><strong>Jefe de mantenimiento del cliente principal: Fundación Centro Colombiano de Epilepsia y Enfermedades Neurológicas (FIRE)</strong>: planes anuales, hojas de vida de equipos y gestión de mantenimientos.</li>
+                <li>Reportes de servicio, acompañamiento a contratistas y soporte remoto a equipos críticos en emergencias.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-marker"><span></span></div>
+            <article class="tl-card">
+              <div class="tl-head">
+                <div>
+                  <h3>Trabajo independiente</h3>
+                  <p class="tl-sub">Técnico de mantenimiento de equipos de estética y belleza · Cartagena, Colombia</p>
+                </div>
+                <span class="tl-date">—</span>
+              </div>
+              <p class="tl-short">Diagnóstico, reparación y puesta en marcha de equipos de estética.</p>
+            </article>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-marker"><span></span></div>
+            <article class="tl-card">
+              <div class="tl-head">
+                <div>
+                  <h3>Fundación Gran Día de Campo</h3>
+                  <p class="tl-sub">Auxiliar de Gestión Humana (voluntariado) · Medellín, Colombia</p>
+                </div>
+                <span class="tl-date">—</span>
+              </div>
+              <p class="tl-short">Actualización de datos de voluntarios, organización por comités y control de registro de reuniones y eventos.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMPETENCIAS ===================== -->
+    <section id="competencias" class="section">
+      <div class="container">
+        <p class="sec-eyebrow">Stack</p>
+        <h2 class="sec-title">Competencias clave</h2>
+        <div class="skills-grid">
+
+          <div class="skill-card reveal">
+            <div class="skill-head"><span class="skill-ic e1">🔌</span><h3>Diseño electrónico</h3></div>
+            <p>Circuitos analógicos y digitales, diseño de PCB (Proteus), instrumentación, electrónica de potencia.</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head"><span class="skill-ic e2">⚙️</span><h3>Microcontroladores / Firmware</h3></div>
+            <p>ATmega 2560 y 328, PIC, ESP32/ESP8266. PlatformIO, arquitectura por capas, pruebas Unity, UART/RS-485.</p>
+            <ul class="tech-list">
+              <li><span class="logo gg--c-plus-plus"></span>C++</li>
+              <li><span class="logo logos--javascript"></span>C (firmware)</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head"><span class="skill-ic e3">📡</span><h3>IoT y comunicaciones</h3></div>
+            <p>MQTT (EMQX, Mosquitto), Node-RED, Raspberry Pi Zero 2W, protocolos seriales propietarios.</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head"><span class="skill-ic e4">🖥️</span><h3>Backend</h3></div>
+            <p>Go (API REST, WebSockets, SQLite, JWT), Node.js/Express, PostgreSQL, MySQL, MongoDB.</p>
+            <ul class="tech-list">
+              <li><span class="logo cib--postgresql"></span>PostgreSQL</li>
+              <li><span class="logo logos--mongodb-icon"></span>MongoDB</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head"><span class="skill-ic e5">🎨</span><h3>Frontend</h3></div>
+            <p>React, TypeScript, Redux, Vite, Vitest + Testing Library, Zod, Recharts, HTML/CSS, Bootstrap.</p>
+            <ul class="tech-list">
+              <li><span class="logo mdi--react"></span>React</li>
+              <li><span class="logo devicon--typescript"></span>TypeScript</li>
+              <li><span class="logo logos--redux"></span>Redux</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head"><span class="skill-ic e6">🧰</span><h3>Infra y herramientas</h3></div>
+            <p>Docker, AWS EC2, VPS, Git/GitHub · CAD y fabricación: SolidWorks, impresión 3D.</p>
+            <ul class="tech-list">
+              <li><span class="logo logos--docker-icon"></span>Docker</li>
+              <li><span class="logo teenyicons--github-solid"></span>GitHub</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head"><span class="skill-ic e7">🤖</span><h3>IA aplicada al desarrollo</h3></div>
+            <p>Gentle AI, generación asistida de código, pruebas y documentación; automatización de tareas repetitivas del ciclo de desarrollo.</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-head"><span class="skill-ic e8">📋</span><h3>Mantenimiento y gestión</h3></div>
+            <p>Planes preventivos/correctivos, hojas de vida de equipos, supervisión de técnicos, Excel avanzado.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROYECTOS ===================== -->
+    <section id="proyectos" class="section section-alt">
+      <div class="container">
+        <p class="sec-eyebrow">Portafolio</p>
+        <h2 class="sec-title">Proyectos destacados</h2>
+
+        <!-- Proyecto destacado: dosificador -->
+        <article class="featured-project reveal">
+          <div class="fp-body">
+            <span class="badge badge-current">Proyecto actual</span>
+            <h3>Sistema de Dosificación Multimáquina</h3>
+            <p class="fp-sub">Automatización de lavanderías industriales · hardware + firmware + backend + dashboard</p>
+            <p>
+              Sistema completo de dosificación automática de productos químicos para múltiples lavadoras:
+              tarjetas electrónicas de diseño propio, firmware embebido con pruebas, backend en Go y dashboard
+              web en React. Sincronización redundante entre la tarjeta principal, memorias externas y una
+              Raspberry Pi. Desarrollo apoyado con <strong>IA (Gentle AI)</strong>.
+            </p>
+            <ul class="fp-tags">
+              <li>ATmega 2560 / 328</li><li>RS-485</li><li>PlatformIO</li><li>Unity tests</li>
+              <li>Go</li><li>WebSocket</li><li>React + TS</li><li>SQLite</li><li>Raspberry Pi</li><li>MQTT</li><li>JWT</li>
+            </ul>
+            <div class="fp-links">
+              <a class="btn btn-small" href="https://github.com/luispino32" target="_blank" rel="noopener">
+                <svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.15c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+                Ver repositorios
+              </a>
+              <a class="btn btn-small btn-ghost" href="#competencias">Stack del proyecto</a>
+            </div>
+          </div>
+          <div class="fp-diagram" aria-hidden="true">
+            <div class="fp-node mega"><span>Tarjeta principal</span><small>ATmega 2560</small></div>
+            <div class="fp-node iface"><span>Interfaz</span><small>ATmega 328</small></div>
+            <div class="fp-node iface"><span>Interfaz</span><small>ATmega 328</small></div>
+            <div class="fp-node iface"><span>Interfaz</span><small>ATmega 328</small></div>
+            <div class="fp-node server"><span>Backend Go + Dashboard</span><small>SQLite · WebSocket</small></div>
+            <div class="fp-line l1"></div><div class="fp-line l2"></div><div class="fp-line l3"></div><div class="fp-line l4"></div>
+          </div>
+        </article>
+
         <div class="projects-grid">
-          <div class="project-tile">
-            <figure>
-              <div>
-                <img src="PREET.png" class="aling_left"/>
-                <ul class="linkProject">
-                  <li>
-                    <a href="https://www.youtube.com/watch?v=6VB7dpQTPzs" target="_blank">
-                      <span class="uit--youtube iconSpace"></span>YouTube
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://preet-client.vercel.app" target="_blank">
-                      <span class="clarity--application-line iconSpace"></span>Demo
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/JoniRedrado/PREET-client/tree/develop" target="_blank">
-                      <span class="teenyicons--github-outline iconSpace"></span>GitHub Front-End
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/JoniRedrado/PREET-api/tree/luisMiguel" target="_blank">
-                      <span class="teenyicons--github-solid_1 iconSpace"></span>GitHub Back-End
-                    </a>
-                  </li>
-                </ul>
+          <article class="project-card reveal">
+            <figure class="pc-media"><img src="web_laundry_system.png" alt="Captura del dashboard Web Laundry System" loading="lazy"/></figure>
+            <div class="pc-body">
+              <h3>Web Laundry System</h3>
+              <p class="pc-sub">Dashboard de control de dosificación automática · sistema en producción en DETERQUIN (2022 – 2023)</p>
+              <p>SPA React/Redux + Express, PostgreSQL + MongoDB, JWT y broker MQTT (EMQX) para dispositivos IoT; AWS EC2 con Docker Compose.</p>
+              <ul class="pc-tags"><li>React</li><li>Redux</li><li>Express</li><li>MQTT</li><li>Docker</li><li>AWS</li></ul>
+              <div class="pc-links">
+                <a href="https://github.com/luispino32/Frond-End-Laundry-System-Multi-Machine" target="_blank" rel="noopener">Front-end ↗</a>
+                <a href="https://github.com/luispino32/Back-End-Laundry-System" target="_blank" rel="noopener">Back-end ↗</a>
+                <a href="https://github.com/luispino32/Laundry-Sistem-Multi-Machine" target="_blank" rel="noopener">Firmware ↗</a>
               </div>
-              <figcaption>PREET (Plataforma de Reserva y Evaluacion de Experiencias Turísticas)</figcaption>
-            </figure>
-          </div>
-          <div class="project-tile">
-            <figure>
-              <div>
-                <img src="web_laundry_system.png" class="aling_left"/>
-                <ul class="linkProject">
-                  <li>
-                    <a href="https://github.com/luispino32/Frond-End-Laundry-System-Multi-Machine" target="_blank">
-                      <span class="teenyicons--github-outline iconSpace"></span>GitHub Front-End
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/luispino32/Back-End-Laundry-System" target="_blank">
-                      <span class="teenyicons--github-solid_1 iconSpace"></span>GitHub Back-End
-                    </a>
-                  </li>
-                </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <figure class="pc-media"><img src="PREET.png" alt="Captura de la plataforma PREET" loading="lazy"/></figure>
+            <div class="pc-body">
+              <h3>PREET</h3>
+              <p class="pc-sub">Plataforma de Reserva y Evaluación de Experiencias Turísticas · proyecto final Henry (2022 – 2024)</p>
+              <p>SPA React + Express, base de datos híbrida PostgreSQL + MongoDB, autenticación por correo (JWT) y Google, Cloudinary, NodeMailer y chatbot con OpenAI.</p>
+              <ul class="pc-tags"><li>React</li><li>Express</li><li>PostgreSQL</li><li>MongoDB</li><li>OpenAI</li></ul>
+              <div class="pc-links">
+                <a href="https://preet-client.vercel.app" target="_blank" rel="noopener">Demo ↗</a>
+                <a href="https://github.com/JoniRedrado/PREET-client" target="_blank" rel="noopener">Front-end ↗</a>
+                <a href="https://github.com/JoniRedrado/PREET-api" target="_blank" rel="noopener">Back-end ↗</a>
+                <a href="https://www.youtube.com/watch?v=6VB7dpQTPzs" target="_blank" rel="noopener">Video ↗</a>
               </div>
-              <figcaption>Dashboard para control de dosificacion automatica</figcaption>
-            </figure>
-          </div>
-          <div class="project-tile">
-            <figure>
-              <div>
-                <img src="Countries.png"/>
-                <ul class="linkProject">
-                  <li>
-                    <a href="https://github.com/luispino32/Countries" target="_blank">
-                      <span class="teenyicons--github-outline iconSpace"></span>GitHub
-                    </a>
-                  </li>
-                </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <figure class="pc-media"><img src="Countries.png" alt="Captura de la SPA Countries" loading="lazy"/></figure>
+            <div class="pc-body">
+              <h3>Countries</h3>
+              <p class="pc-sub">SPA de consulta e información de países · Henry Bootcamp (2022)</p>
+              <p>SPA con React y Redux consumiendo APIs REST, con búsqueda, filtros y vistas de detalle.</p>
+              <ul class="pc-tags"><li>React</li><li>Redux</li><li>REST</li></ul>
+              <div class="pc-links">
+                <a href="https://github.com/luispino32/Countries" target="_blank" rel="noopener">GitHub ↗</a>
               </div>
-              <figcaption>Countries</figcaption>
-            </figure>
-          </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="pc-media pc-media-plain"><span>👾</span></div>
+            <div class="pc-body">
+              <h3>Rick and Morty</h3>
+              <p class="pc-sub">App de práctica — repo en desarrollo · Henry Bootcamp (2023)</p>
+              <p>Ejercicio de consumo de APIs públicas con React. Repositorio de práctica (inconcluso).</p>
+              <ul class="pc-tags"><li>React</li><li>API REST</li></ul>
+              <div class="pc-links">
+                <a href="https://github.com/luispino32/Rick-And-Morty" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
         </div>
-      </section>
-      <section id="skills">
-        <h1>Skills</h1>
-        <div class="skills">
-          <div>
-            <h2>Languages</h2>
-            <ul>
-              <li><span class="logos--javascript"></span><span>JavaScript</span></li>
-              <li><span class="devicon--typescript"></span><span>TypeScript</span></li>
-              <li><span class="file-icons--php"></span><span>PHP</span></li>
-              <li><span class="gg--c-plus-plus"></span><span>C++</span></li>
-            </ul>
-          </div>
-          <div>
-            <h2>Library/Framework Frontend</h2>
-            <ul>
-              <li><span class="mdi--react"></span><span>React Js</span></li>
-            </ul>
-          </div>
-          <div>
-            <h2>Library/Framework Backend</h2>
-            <ul>
-              <li><span class="skill-icons--expressjs-light"></span><span>Express</span></li>
-            </ul>
-          </div>
-          <div>
-            <h2>Database</h2>
-            <ul>
-              <li><span class="cib--postgresql"></span><span>PostgreSQL</span></li>
-              <li><span class="simple-icons--mysql"></span><span>Mysql</span></li>
-              <li><span class="logos--mongodb-icon"></span><span>MongoDB</span></li>
-            </ul>
-          </div>
-          <div>
-            <h2>Tools</h2>
-            <ul>
-              <li><span class="teenyicons--github-solid"></span><span>GitHub</span></li>
-              <li><span class="logos--docker-icon"></span><span>Docker</span></li>
-              <li><span class="logos--redux"></span><span>Redux</span></li>
-              <li title="MQTT Broker"><span class="akar-icons--hexagon"></span><span>EMQX</span></li>
-            </ul>
-          </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCACIÓN ===================== -->
+    <section id="educacion" class="section">
+      <div class="container">
+        <p class="sec-eyebrow">Formación</p>
+        <h2 class="sec-title">Educación y certificaciones</h2>
+
+        <div class="edu-grid">
+          <article class="edu-card edu-feat reveal">
+            <div class="edu-head">
+              <span class="edu-ic">🎓</span>
+              <div><h3>Ingeniería Electrónica</h3><p class="edu-where">Universidad Tecnológica de Bolívar</p></div>
+              <span class="edu-date">2005 — 2011 · reingreso 2021 y 2026</span>
+            </div>
+            <p><strong>Todas las materias de la carrera cursadas y aprobadas.</strong> En proceso de grado: pendiente únicamente el requisito de idioma (3 niveles de inglés).</p>
+            <span class="badge badge-current">En curso</span>
+          </article>
+
+          <article class="edu-card reveal">
+            <div class="edu-head">
+              <span class="edu-ic">📡</span>
+              <div><h3>Minor en Telecomunicaciones</h3><p class="edu-where">Universidad Tecnológica de Bolívar</p></div>
+              <span class="edu-date">2017</span>
+            </div>
+            <p>Énfasis complementario de la carrera de Ingeniería Electrónica.</p>
+            <a class="evidence-link" href="assets/Anexos y Certificados.pdf">Ver diploma (§1) ↗</a>
+          </article>
+
+          <article class="edu-card reveal">
+            <div class="edu-head">
+              <span class="edu-ic">💻</span>
+              <div><h3>Full Stack Web Developer</h3><p class="edu-where">Henry Bootcamp</p></div>
+              <span class="edu-date">2024</span>
+            </div>
+            <p>800 horas teórico-prácticas de desarrollo web full stack.</p>
+            <a class="evidence-link" href="assets/Anexos y Certificados.pdf">Ver diploma (§2) ↗</a>
+          </article>
+
+          <article class="edu-card reveal">
+            <div class="edu-head">
+              <span class="edu-ic">🌐</span>
+              <div><h3>IoT Masterclass</h3><p class="edu-where">Udemy</p></div>
+              <span class="edu-date">2022</span>
+            </div>
+            <p>Internet de las Cosas: MQTT, Node-RED y soluciones embebidas, aplicadas al sistema de dosificación.</p>
+            <a class="evidence-link" href="assets/Anexos y Certificados.pdf">Ver constancia (§3) ↗</a>
+          </article>
+
+          <article class="edu-card reveal">
+            <div class="edu-head">
+              <span class="edu-ic">📚</span>
+              <div><h3>Cursos complementarios</h3><p class="edu-where">Udemy · freeCodeCamp</p></div>
+              <span class="edu-date">2022 — 2024</span>
+            </div>
+            <p>Diseño Web Profesional (Udemy) · Responsive Web Design (freeCodeCamp).</p>
+          </article>
+
+          <article class="edu-card reveal">
+            <div class="edu-head">
+              <span class="edu-ic">🗣️</span>
+              <div><h3>Idiomas</h3><p class="edu-where">Español / Inglés</p></div>
+            </div>
+            <p><strong>Español:</strong> nativo · <strong>Inglés:</strong> nivel técnico intermedio, en curso (requisito de grado — restan 3 niveles).</p>
+          </article>
         </div>
-      </section>
-      <section id="contact">
-        <h1>Trabajemos Juntos . . .</h1>
-        <p>Como quieres tu café?</p>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/luis-miguel-ospino" target="_blank">
-              <span class="uiw--linkedin iconSpace"></span>Linkedin
+
+        <div class="evidence-banner reveal">
+          <div>
+            <h3>📄 Evidencia de formación</h3>
+            <p>Diplomas y certificados en un solo archivo ordenado: Minor en Telecomunicaciones, Henry Bootcamp, curso IoT de Udemy y las materias cursadas por periodo de la carrera.</p>
+          </div>
+          <a class="btn btn-primary" href="assets/Anexos y Certificados.pdf" download>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            Descargar evidencias
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section id="contacto" class="section contact">
+      <div class="container">
+        <p class="sec-eyebrow">Contacto</p>
+        <h2 class="sec-title">Trabajemos juntos</h2>
+        <p class="contact-lead">¿Tenés un proyecto de electrónica, IoT, firmware o software? Hablemos.</p>
+
+        <ul class="contact-grid">
+          <li class="contact-card reveal">
+            <a href="mailto:luispino32@hotmail.com">
+              <span class="contact-ic oui--email"></span>
+              <span class="cc-label">Email</span>
+              <span class="cc-value">luispino32@hotmail.com</span>
             </a>
           </li>
-          <li>
-            <a href="https://github.com/luispino32" target="_blank">
-              <span class="teenyicons--github-outline iconSpace"></span>GitHub
+          <li class="contact-card reveal">
+            <a href="https://wa.me/573052957526" target="_blank" rel="noopener">
+              <span class="contact-ic">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8Zm-2.9 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.7c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.2.7.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.2-.2-.5-.3l-1.8-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.1-.3 0-.4.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5-.1-.2-.6-1.6-.9-2.2-.2-.5-.4-.5-.6-.5Z"/></svg>
+              </span>
+              <span class="cc-label">WhatsApp</span>
+              <span class="cc-value">+57 305 295 7526</span>
             </a>
           </li>
-          <li>
-            <a href="mailto:luispino32@hotmail.com" target="_blank">
-              <span class="oui--email iconSpace"></span>Send a mail
+          <li class="contact-card reveal">
+            <a href="https://www.linkedin.com/in/luis-miguel-ospino" target="_blank" rel="noopener">
+              <span class="contact-ic uiw--linkedin"></span>
+              <span class="cc-label">LinkedIn</span>
+              <span class="cc-value">in/luis-miguel-ospino</span>
             </a>
           </li>
-          <li>
-            <a href="https://drive.google.com/file/d/1RcPZDfgTMBaEQwsALQ4Z9V4wa3OT611y/view?usp=drive_link" target="_blank">
-              <span class="mi--document iconSpace"></span>CV - Resume
+          <li class="contact-card reveal">
+            <a href="https://github.com/luispino32" target="_blank" rel="noopener">
+              <span class="contact-ic teenyicons--github-outline"></span>
+              <span class="cc-label">GitHub</span>
+              <span class="cc-value">github.com/luispino32</span>
             </a>
           </li>
         </ul>
-      </section>
-    </main>
-  </body>
+
+        <div class="contact-docs reveal">
+          <a class="btn btn-primary" href="assets/cv-completo.pdf" download>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            Descargar CV
+          </a>
+          <a class="btn btn-ghost" href="assets/Anexos y Certificados.pdf" download>📄 Anexos y Certificados</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Luis Miguel Ospino Acuña · Hecho con 💙, electrónica y mucho café.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
 </html>
