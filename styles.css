@@ -625,6 +625,56 @@ ul { list-style: none; }
 .cc-value { font-size: .98rem; font-weight: 600; color: var(--text); word-break: break-word; }
 .contact-docs { display: flex; gap: .9rem; flex-wrap: wrap; margin-top: 2rem; }
 
+/* ---------- Formulario de contacto ---------- */
+.contact-form {
+  margin-top: 2.4rem;
+  background: linear-gradient(135deg, var(--card-2), var(--card));
+  border: 1px solid var(--border-strong);
+  border-radius: 22px;
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+}
+.contact-form h3 { font-family: var(--font-head); font-size: 1.25rem; font-weight: 700; margin-bottom: .2rem; }
+.form-badge {
+  font-size: .68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--green);
+  background: rgba(52, 211, 153, .12);
+  border: 1px solid rgba(52, 211, 153, .4);
+  padding: .22rem .55rem;
+  border-radius: 999px;
+  vertical-align: middle;
+  margin-left: .4rem;
+}
+.cf-hint { color: var(--text-faint); font-size: .88rem; margin-bottom: 1.4rem; }
+.cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.cf-field { margin-bottom: 1rem; }
+.cf-field label { display: block; font-size: .8rem; font-weight: 600; color: var(--text-dim); margin-bottom: .4rem; }
+.cf-field input, .cf-field textarea {
+  width: 100%;
+  padding: .8rem 1rem;
+  border-radius: 11px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-2);
+  color: var(--text);
+  font-family: inherit;
+  font-size: .95rem;
+  transition: border-color .18s ease, box-shadow .18s ease;
+  resize: vertical;
+}
+.cf-field input::placeholder, .cf-field textarea::placeholder { color: var(--text-faint); }
+.cf-field input:focus, .cf-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, .18);
+}
+.cf-status { margin-top: .9rem; font-size: .9rem; min-height: 1.2em; }
+.cf-status.ok { color: var(--green); }
+.cf-status.err { color: #f87171; }
+.cf-status.sending { color: var(--text-dim); }
+
 /* ---------- Footer ---------- */
 .footer {
   border-top: 1px solid var(--border);

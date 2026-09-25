@@ -97,4 +97,54 @@
     yearEl.textContent = new Date().getFullYear();
     yearEl.textContent = Math.max(yearEl.textContent, 2026);
   }
+
+  /* ---------- Formulario de contacto (FormSubmit AJAX) ---------- */
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    var cfStatus = document.getElementById('cfStatus');
+    var cfSubmit = document.getElementById('cfSubmit');
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+
+      var payload = {};
+      new FormData(contactForm).forEach(function (value, key) {
+        payload[key] = value;
+      });
+
+      cfSubmit.disabled = true;
+      cfStatus.textContent = 'Enviando...';
+      cfStatus.className = 'cf-status sending';
+
+      fetch('https://formsubmit.co/ajax/luispino32@hotmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('request failed');
+          return res.json();
+        })
+        .then(function () {
+          cfStatus.textContent = 'Mensaje enviado. Gracias por escribirme, te respondo a la brevedad.';
+          cfStatus.className = 'cf-status ok';
+          contactForm.reset();
+        })
+        .catch(function () {
+          cfStatus.textContent = 'No se pudo enviar el mensaje. Escribime directo a luispino32@hotmail.com.';
+          cfStatus.className = 'cf-status err';
+        })
+        .finally(function () {
+          cfSubmit.disabled = false;
+        });
+    });
+  }
 })();

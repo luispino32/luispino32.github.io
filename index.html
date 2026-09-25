@@ -91,7 +91,7 @@
             Más de <strong>10 años de experiencia real</strong> en electrónica, mantenimiento biomédico e industrial,
             automatización con microcontroladores, IoT y desarrollo de software, construyendo soluciones completas de
             hardware + firmware + backend + frontend. Actualmente desarrollo, de forma independiente, la mejora integral
-            del <strong>sistema de dosificación multimáquina</strong> de lavanderías industriales iniciado en DETERQUIN,
+            del <strong>sistema de dosificación multimáquina</strong> de lavanderías industriales, integrando
             integrando <strong>herramientas de IA (Gentle AI)</strong> en el desarrollo de firmware y software para
             automatizar tareas y mejorar la productividad sin sacrificar calidad.
           </p>
@@ -120,7 +120,7 @@
               <div class="tl-head">
                 <div>
                   <h3>Dosificador Multimáquina — mejora continua</h3>
-                  <p class="tl-sub">Proyecto propio en desarrollo · iniciado en DETERQUIN</p>
+                  <p class="tl-sub">Proyecto propio en desarrollo · dosificación automática para lavanderías industriales</p>
                 </div>
                 <span class="tl-date">2023 — actualidad</span>
               </div>
@@ -316,7 +316,7 @@
             <figure class="pc-media"><img src="web_laundry_system.png" alt="Captura del dashboard Web Laundry System" loading="lazy"/></figure>
             <div class="pc-body">
               <h3>Web Laundry System</h3>
-              <p class="pc-sub">Dashboard de control de dosificación automática · sistema en producción en DETERQUIN (2022 – 2023)</p>
+              <p class="pc-sub">Dashboard de control de dosificación automática · sistema de dosificación web (2022 – 2023)</p>
               <p>SPA React/Redux + Express, PostgreSQL + MongoDB, JWT y broker MQTT (EMQX) para dispositivos IoT; AWS EC2 con Docker Compose.</p>
               <ul class="pc-tags"><li>React</li><li>Redux</li><li>Express</li><li>MQTT</li><li>Docker</li><li>AWS</li></ul>
               <div class="pc-links">
@@ -489,6 +489,35 @@
             </a>
           </li>
         </ul>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <h3>Envíame un mensaje <span class="form-badge">directo a mi correo</span></h3>
+          <p class="cf-hint">Completá el formulario y el mensaje llega a mi casilla sin que tengas que abrir tu correo.</p>
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="cfName">Nombre</label>
+              <input id="cfName" name="name" type="text" placeholder="Tu nombre" required/>
+            </div>
+            <div class="cf-field">
+              <label for="cfEmail">Tu correo (para responderte)</label>
+              <input id="cfEmail" name="email" type="email" placeholder="tucorreo@ejemplo.com" required/>
+            </div>
+          </div>
+          <div class="cf-field">
+            <label for="cfSubject">Asunto</label>
+            <input id="cfSubject" name="_subject" type="text" placeholder="Asunto del mensaje" required/>
+          </div>
+          <div class="cf-field">
+            <label for="cfMessage">Mensaje</label>
+            <textarea id="cfMessage" name="message" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
+          </div>
+          <input type="hidden" name="_captcha" value="false"/>
+          <button type="submit" class="btn btn-primary" id="cfSubmit">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg>
+            Enviar mensaje
+          </button>
+          <p class="cf-status" id="cfStatus" role="status" aria-live="polite"></p>
+        </form>
 
         <div class="contact-docs reveal">
           <a class="btn btn-primary" href="assets/cv-completo.pdf" download>
