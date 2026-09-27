@@ -147,4 +147,67 @@
         });
     });
   }
+
+  /* ---------- Lightbox de capturas del dosificador ---------- */
+  var shots = Array.prototype.slice.call(document.querySelectorAll('.fp-shots .fp-shot'));
+  var lightbox = null, lbImg = null, lbCap = null, current = -1;
+
+  function buildLightbox() {
+    var box = document.createElement('div');
+    box.className = 'lightbox';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-label', 'Captura ampliada');
+    box.innerHTML =
+      '<button class="lightbox-backdrop" type="button" aria-label="Cerrar"></button>' +
+      '<button class="lightbox-nav prev" type="button" aria-label="Anterior">&#10094;</button>' +
+      '<button class="lightbox-nav next" type="button" aria-label="Siguiente">&#10095;</button>' +
+      '<button class="lightbox-close" type="button" aria-label="Cerrar">&times;</button>' +
+      '<figure class="lightbox-figure"><img class="lightbox-img" alt="" src=""/><figcaption class="lightbox-caption"></figcaption></figure>';
+    document.body.appendChild(box);
+    return box;
+  }
+
+  function openShot(i) {
+    if (!shots.length) return;
+    current = (i + shots.length) % shots.length;
+    var shot = shots[current];
+    var img = shot.querySelector('img');
+    lbImg.src = shot.getAttribute('data-full');
+    lbImg.alt = img ? img.alt : '';
+    lbCap.textContent = shot.getAttribute('data-caption') +
+      (shots.length > 1 ? ' (' + (current + 1) + ' / ' + shots.length + ')' : '');
+    lightbox.classList.add('open');
+    document.body.classList.add('lb-lock');
+  }
+
+  function closeShot() {
+    lightbox.classList.remove('open');
+    document.body.classList.remove('lb-lock');
+    current = -1;
+  }
+
+  if (shots.length) {
+    lightbox = buildLightbox();
+    lbImg = lightbox.querySelector('.lightbox-img');
+    lbCap = lightbox.querySelector('.lightbox-caption');
+
+    shots.forEach(function (shot, i) {
+      shot.addEventListener('click', function () {
+        openShot(i);
+      });
+    });
+
+    lightbox.querySelector('.lightbox-close').addEventListener('click', closeShot);
+    lightbox.querySelector('.lightbox-backdrop').addEventListener('click', closeShot);
+    lightbox.querySelector('.lightbox-nav.prev').addEventListener('click', function () { openShot(current - 1); });
+    lightbox.querySelector('.lightbox-nav.next').addEventListener('click', function () { openShot(current + 1); });
+
+    document.addEventListener('keydown', function (e) {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') closeShot();
+      if (e.key === 'ArrowLeft') openShot(current - 1);
+      if (e.key === 'ArrowRight') openShot(current + 1);
+    });
+  }
 })();
